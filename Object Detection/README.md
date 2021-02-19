@@ -20,6 +20,6 @@ There are some difficulties of object detection problem that are addressed by al
 
 - 
 
-[fcos id]:https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/FCOS.md
+[fcos id]:https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/FCOS.md
 
-[fasterrcnn id]:https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Faster%20RCNN.md
+[fasterrcnn id]:https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Two-Stage/Faster%20RCNN.md

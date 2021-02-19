@@ -11,15 +11,16 @@ FCOS, as its name, is an one-stage object detector that only use fully convoluti
   
 **Problem Formulation**
 
-Given an image, we pass it through a FCN to get *feature vectors* represent the whole image. Assume the feature vectors have size of $Ch*H*W$, then the goal of FCOS is to predict 3 things (or so called 3 branches):
-- $4*H*W$ mask for (left, top, right, bottom) prediction for each pixel, where l,t,r,b are calculated by:
-  - $l = x- x_0$
-  - $r = x_1 - x$
-  - $t = y - y_0$
-  - $b = y_1 - y$
-- $C*H*W$ mask for class prediction for each pixel. (where C represents the number of classes).
-- $1*H*W$ mask for centerness score prediction. The centerness score is calculated as follow:
-    $$centerness = \sqrt{\frac{min(l,r)}{max(l,r)}*\frac{min(b,t)}{max(b,t)}}$$
+Given an image, we pass it through a FCN to get *feature vectors* represent the whole image. Assume the feature vectors have size of ChxHxW, then the goal of FCOS is to predict 3 things (or so called 3 branches):
+- 4xHxW mask for (left, top, right, bottom) prediction for each pixel, where l,t,r,b are calculated by:
+  - <img src="https://render.githubusercontent.com/render/math?math=l = x- x_0">
+  - <img src="https://render.githubusercontent.com/render/math?math=r = x_1- x">
+  - <img src="https://render.githubusercontent.com/render/math?math=t = y- y_0">
+  - <img src="https://render.githubusercontent.com/render/math?math=b = y_1- y">
+- CxHxW mask for class prediction for each pixel. (where C represents the number of classes).
+- 1xHxW mask for centerness score prediction. The centerness score is calculated as follow:
+
+    <img src="https://render.githubusercontent.com/render/math?math=centerness = \sqrt{\frac{min(l,r)}{max(l,r)}*\frac{min(b,t)}{max(b,t)}}">
 
 ****
 **Arising Problems that was tackled in the paper**

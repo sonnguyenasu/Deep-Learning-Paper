@@ -2,6 +2,8 @@
 
 Paper link: [fcos][link id]
 
+Code link: [fcos code][link id 2]
+
 FCOS, as its name, is an one-stage object detector that only use fully convolution network to predict result bounding box. In my opinion, the authors:
 - propose an one-stage network that can predict boxes without using anchors.
 - propose a solution for ambiguity of labels on overlapping bounding boxes.
@@ -34,3 +36,5 @@ Then in order to solve the problems of multi-scale overlapping object, the autho
 With multi-scale detection, we can eliminate a lot of pixels fall into ambiguity since the pixels in bigger scale will account for the big boxes, while the ones in small scale account for the small boxes. Of course, there will still be some boxes of ambiguity, but it should not harm to the model (as the author said).
 
 [link id]: https://arxiv.org/pdf/1904.01355.pdf
+
+[link id 2]: https://github.com/aim-uofa/AdelaiDet/tree/master/configs/FCOS-Detection

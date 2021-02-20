@@ -8,8 +8,9 @@ FCOS, as its name, is an one-stage object detector that only use fully convoluti
 - propose an one-stage network that can predict boxes without using anchors.
 - propose a solution for ambiguity of labels on overlapping bounding boxes.
 - propose a centerness branch that help boost the performance of the detection.
-  
-**Problem Formulation**
+
+****
+## Problem Formulation
 
 Given an image, we pass it through a FCN to get *feature vectors* represent the whole image. Assume the feature vectors have size of ChxHxW, then the goal of FCOS is to predict 3 things (or so called 3 branches):
 - 4xHxW mask for (left, top, right, bottom) prediction for each pixel, where l,t,r,b are calculated by:

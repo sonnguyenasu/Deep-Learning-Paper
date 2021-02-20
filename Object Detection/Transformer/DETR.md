@@ -14,11 +14,12 @@ The ultimate goal of DETR is:
 - The first paper that successfully apply transformer in object detection.
 - The first competitive end-to-end model that directly output the prediction set without any additional knowledge. 
 ****
-**Problem Formulation**
+## Problem Formulation
 
-Given an image **I**, the goal is to find a set of bounding boxes **S** and their according labels. 
+Given an image **I**, the goal is to find a set **S** of bounding boxes and their according labels . 
 
-**Approach** 
+****
+## Proposed Solution
 
 DETR outputs a set of bounding boxes by treating the set as the output of Transformer Decoder. Since the output is a set, we need a loss that is same to all permutation of the output and labels. Also, since output set is not a sequence and all prediction are not time-wise dependence, DETR would output all boxes at once. They achieve these two by 2 methods: Bi-partite Matching Loss for Set Matching and Non-autoregressive Transformer for one-time boxes outputing.
 
@@ -40,8 +41,7 @@ This bi-partite loss helps optimize the set predictions since it can account for
 
 Due to the fact that the predicted set has no temporal dependency, it would be nice if Transformer Decoder can output all of the result at once. And this model does exactly that.
 
-****
-**DETR Model**
+**3. DETR Model**
 
 ![image_model](detr.png)
 

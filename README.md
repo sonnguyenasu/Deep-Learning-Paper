@@ -4,7 +4,26 @@ This is inspired by the work of multiple people on the internet (including but n
 To be short, it is my resolution for 2021 to keeps reading and summarizing significant paper in Machine Learning, especially Computer Vision. I will also try to reimplement some of the interesting paper.
 
 ****
-## Object Detection
-[Object Detection][objdet id]
+<details>
+<summary style='font-size:20px;'>Object Detection</summary>
+<details>
+<summary style='font-size:15px;'>Two-stage methods</summary>
 
-[objdet id]:https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection
+- [Faster RCNN](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Two-Stage/Faster%20RCNN.md)
+  
+</details>
+
+<details>
+<summary style='font-size:15px;'>One-stage methods</summary>
+- [Fully Convolutional One Stage Detector (FCOS)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/FCOS.md)
+
+- 
+</details>
+
+<details>
+<summary style='font-size:15px;'>Transformer methods</summary>
+
+- [Detection Transformer (DETR)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Transformer/DETR.md)
+
+</details>
+</details>

@@ -15,6 +15,7 @@ To be short, it is my resolution for 2021 to keeps reading and summarizing signi
 
 <details>
 <summary style='font-size:15px;'>One-stage methods</summary>
+  
 - [Fully Convolutional One Stage Detector (FCOS)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/FCOS.md)
 
 - 

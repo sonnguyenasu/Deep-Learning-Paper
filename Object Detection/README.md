@@ -19,6 +19,7 @@ There are some difficulties of object detection problem that are addressed by al
 
 <details>
 <summary style='font-size:20px;'>One-stage methods</summary>
+
 - [Fully Convolutional One Stage Detector (FCOS)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/FCOS.md)
 
 - 

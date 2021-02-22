@@ -18,7 +18,7 @@ To be short, it is my resolution for 2021 to keeps reading and summarizing signi
   
 - [Fully Convolutional One Stage Detector (FCOS)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/FCOS.md)
 
-- 
+- [CenterNet: Object as Points](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/CenterNet.md)
 </details>
 
 <details>

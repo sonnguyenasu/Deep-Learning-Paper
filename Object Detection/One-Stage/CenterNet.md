@@ -51,11 +51,16 @@ c. Size Heat-map:
 
 **2. CenterNet Architecture**
 
-Architecture of CenterNet is rather simple: it consists of a backbone network that called Down-Sample, a neck (optional) and an Up-Sample block accounts for producing predicting heat-maps.
+Architecture of CenterNet is rather simple: it consists of a *backbone* network that called Down-Sample, a neck (optional) and an *Up-Sample* block accounts for producing predicting heat-maps.
 
-Assume that the output of the network are \hat{Y} for keypoint (center), \hat{O} for offset, and \hat{S} for size, and the input image has *N* objects.
+In the paper, the author experimented on 4 backbones: Resnet18, Resnet101, DLA and HourGlass. HourGlass yields best mAP while Resnet18 is the fastest (due to its light network architecture).
 
-For **loss function**, since there are three heatmaps to optimize, we will have 3 losses: L_{center}, L_{offset}, L_{size}, where:
+
+**3. Loss Function**
+
+Assume that the output of the network are \hat{Y} for keypoint (center), <img src="https://render.githubusercontent.com/render/math?math=\hat{O}"> for offset, and <img src="https://render.githubusercontent.com/render/math?math=\hat{S}"> for size, and the input image has *N* objects.
+
+For **loss function**, since there are three heatmaps to optimize, we will have 3 losses: <img src="https://render.githubusercontent.com/render/math?math=L_{center}, L_{offset}, L_{size}">, where:
 
 - <img src="https://render.githubusercontent.com/render/math?math=L_{center} = \dfrac{-1}{N} \sum_{xyc}\begin{cases}(1-\hat{Y}_{xyc})^\alpha log(\hat{Y}_{xyc}), \forall Y_{xyc}=1 \\ (1-\hat{Y}_{xyc})^\beta (\hat{Y}_{xyc})^\alpha*log(1-\hat{Y}_{xyc}), else \end{cases}">
 
@@ -69,4 +74,7 @@ We saw that loss for center is the focal loss (to balance out the imbalance in c
 
 <img src="https://render.githubusercontent.com/render/math?math=L = L_{center} + \lambda_{offset}*L_{offset} + \lambda_{size}*L_{size}">
 
-  
+****
+**Technical note**
+- In the repositories, they have an installation for Deformable Convolution v2, it may be a hint for different backbone than the ones mentioned in the paper.
+- The author did not implement Feature Pyramid Network. Instead, they sum-up all the layer feature. This may be okay since they will not need any NMS at inference time, but the result may not be the best.

@@ -4,6 +4,8 @@ Paper link: [paper](https://arxiv.org/abs/1904.07850)
 
 Code link: [code](https://github.com/xingyizhou/CenterNet)
 
+My Implementation: [code](https://github.com/tson1997/CenterNet-ReImplementation)
+
 While there are many methods of object detection treating the problems as a set of anchor boxes classification, there are ones that treat it as a pixel labeling problem (such as [FCOS](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/FCOS.md)). CenterNet is also one methods in the class of pixel labeling approaches: it treated the problem as a keypoint (Center) finding and along with width and height of the box, CenterNet can directly output the final bounding box without any post processing such as non-maximal suppression.
 
 **Special points to note:** There are two models named CenterNet, one is this model, and the other is the model applying corner pooling to find keypoint triplets (corners and center.)

@@ -22,7 +22,7 @@ There are some difficulties of object detection problem that are addressed by al
 
 - [Fully Convolutional One Stage Detector (FCOS)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/FCOS.md)
 
-- 
+- [CenterNet: Object as Points](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/C
 </details>
 
 <details>

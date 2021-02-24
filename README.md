@@ -4,8 +4,7 @@ This is inspired by the work of multiple people on the internet (including but n
 To be short, it is my resolution for 2021 to keeps reading and summarizing significant paper in Machine Learning, especially Computer Vision. I will also try to reimplement some of the interesting paper.
 
 ****
-<details>
-<summary style='font-size:20px;'>Object Detection</summary>
+## Object Detection
 <details>
 <summary style='font-size:15px;'>Two-stage methods</summary>
 
@@ -28,4 +27,9 @@ To be short, it is my resolution for 2021 to keeps reading and summarizing signi
 
 - [TSP FCOS](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Transformer/TSP%20FCOS.md)
 </details>
-</details>
+
+****
+## Implementations:
+
+- [FCOS]( https://github.com/tson1997/FCOS-ReImplementation)
+- [CenterNet](https://github.com/tson1997/CenterNet-ReImplementation)

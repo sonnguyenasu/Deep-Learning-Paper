@@ -31,5 +31,5 @@ To be short, it is my resolution for 2021 to keeps reading and summarizing signi
 ****
 ## Implementations:
 
-- [FCOS]( https://github.com/tson1997/FCOS-ReImplementation)
+- [FCOS]( https://github.com/tson1997/simple_fcos_pytorch)
 - [CenterNet](https://github.com/tson1997/CenterNet-ReImplementation)

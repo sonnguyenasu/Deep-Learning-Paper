@@ -4,7 +4,7 @@ Paper link: [fcos][link id]
 
 Code link: [fcos code][link id 2]
 
-My own Implementation link: [implementation](https://github.com/tson1997/FCOS-ReImplementation)
+My own Implementation link: [implementation](https://github.com/tson1997/simple_fcos_pytorch)
 
 FCOS, as its name, is an one-stage object detector that only use fully convolution network to predict result bounding box. In my opinion, the authors:
 - propose an one-stage network that can predict boxes without using anchors.

@@ -10,26 +10,24 @@ There are some difficulties of object detection problem that are addressed by al
 - The number of objects in an image varies and we do not know in advance how many there are.
 - The object's shape may vary.
 - There can be objects that are overlap or occluded.
-<details>
-<summary style='font-size:20px;'>Two-stage methods</summary>
+
+### Two-stage methods
 
 - [Faster RCNN](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Two-Stage/Faster%20RCNN.md)
-  
-</details>
+ 
 
-<details>
-<summary style='font-size:20px;'>One-stage methods</summary>
+### One-stage methods
 
 - [Fully Convolutional One Stage Detector (FCOS)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/FCOS.md)
 
 - [CenterNet: Object as Points](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/One-Stage/CenterNet.md) 
 -
-</details>
 
-<details>
-<summary style='font-size:20px;'>Transformer methods</summary>
+### Transformer methods
 
 - [Detection Transformer (DETR)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Transformer/DETR.md)
 
-</details>
+- [Deformable DETR](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Transformer/Deformable%20DETR.md)
+
+- [TSP FCOS](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Transformer/TSP%20FCOS.md)
 

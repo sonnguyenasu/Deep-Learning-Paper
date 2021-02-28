@@ -26,6 +26,8 @@ To be short, it is my resolution for 2021 to keeps reading and summarizing signi
 - [Detection Transformer (DETR)](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Transformer/DETR.md)
 
 - [TSP FCOS](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Transformer/TSP%20FCOS.md)
+
+- [Deformable DETR](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Transformer/Deformable%20DETR.md)
 </details>
 
 ****

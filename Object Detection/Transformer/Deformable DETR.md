@@ -26,6 +26,8 @@ This paper aims at optimizing the performance of DETR, enable it to work with hi
 
 1. Deformable Attention Module
    
+   Instead of working on the whole image pixels which have too many queries, the multi-head self attention is re-defined to work on only a vicinity of given pixels only. The formula is: 
+
 2. Multi-scale Deformable Attention Module
    
 3. FPN on DETR

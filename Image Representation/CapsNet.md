@@ -37,28 +37,27 @@ Therefore, the only question left is how should the "*agreement*" be calculated 
 
 3.1 Affine Transform
 
-Let **$u_i$** the input from lower capsule (which is a vector), we apply a vector multiplication to it in order to get affine transformation robustness, so the new input to the next layer's capsule j is:
+Let **<img src="https://render.githubusercontent.com/render/math?math=u_i">** the input from lower capsule (which is a vector), we apply a vector multiplication to it in order to get affine transformation robustness, so the new input to the next layer's capsule j is:
 
-$$\hat{u}_{j|i} = W_{ij}u_i$$
+<img src="https://render.githubusercontent.com/render/math?math=\hat{u}_{j|i} = W_{ij}u_i">
 
 3.2. Weighted Average
 
-We find a set of scalar $c_{ij}$ such that they some to 1 and contain some information about the mutual relationship between capsule i and capsule j. If we have such set of scalar, then we can calculate the output at capsule j as:
+We find a set of scalar <img src="https://render.githubusercontent.com/render/math?math=c_{ij}"> such that they some to 1 and contain some information about the mutual relationship between capsule i and capsule j. If we have such set of scalar, then we can calculate the output at capsule j as:
 
-$$s_j = \sum_i c_{ij}\hat{u}_{j|i}$$
+<img src="https://render.githubusercontent.com/render/math?math=s_j = \sum_i c_{ij}\hat{u}_{j|i}">
 
 3.3. Activation function
 
-Let $v_j$ be final vector output of capsule j, $s_j$ be the output of capsule before going through activation. Activation function of the capsule will make length of $s_j$ close to 1 if its length is big, and close to 0 if the length is small, hence, we have the *squashing* activation function:
+Let <img src="https://render.githubusercontent.com/render/math?math=v_j"> be final vector output of capsule j, <img src="https://render.githubusercontent.com/render/math?math=s_j"> be the output of capsule before going through activation. Activation function of the capsule will make length of $s_j$ close to 1 if its length is big, and close to 0 if the length is small, hence, we have the *squashing* activation function:
 
-$$ v_j = \frac{||s_j||^2}{||s_j||^2+1}\frac{s_j}{||s_j||}$$
+<img src="https://render.githubusercontent.com/render/math?math=v_j = \frac{||s_j||^2}{||s_j||^2+1}\frac{s_j}{||s_j||}">
 
+3.4. Calculation of <img src="https://render.githubusercontent.com/render/math?math=c_{ij}">
 
-3.4. Calculation of $c_{ij}$
+So all left is just how can we come up with the set of routing parameters <img src="https://render.githubusercontent.com/render/math?math=c_{ji}">.
 
-So all left is just how can we come up with the set of routing parameters $c_{ji}$.
-
-It is easy to see that what $c_{ji}$ does actually is similar to the "*agreement*" factor between 2 capsules that was discussed previously. One easy way to do it is that we can calculate the dot product between output vector of capsule j ($v_j$) and the converted output vector of capsule i in previous layer (which is $\hat{u}_{j|i}$). Hence, the author comes up with idea of dynamic routing algorithm, which does exactly what describe above:
+It is easy to see that what <img src="https://render.githubusercontent.com/render/math?math=c_{ji}"> does actually is similar to the "*agreement*" factor between 2 capsules that was discussed previously. One easy way to do it is that we can calculate the dot product between output vector of capsule j (<img src="https://render.githubusercontent.com/render/math?math=v_j">) and the converted output vector of capsule i in previous layer (which is <img src="https://render.githubusercontent.com/render/math?math=\hat{u}_{j|i}">). Hence, the author comes up with idea of dynamic routing algorithm, which does exactly what describe above:
 
 ![algorithm](routing-capsnet.png)
 
@@ -71,9 +70,10 @@ Such loss is calculated as follow:
 
 For each digit capsule k:
 
-$$L_k = T_k*max(0,m^+-||v_k||)^2+ \lambda(1-T_k)*max(0,||v_k|| - m^-)^2$$
+<img src="https://render.githubusercontent.com/render/math?math=L_k = T_k*max(0,m^+-||v_k||)^2+ \lambda(1-T_k)*max(0,||v_k|| - m^-)^2">
 
 The explanation of each component in the loss is as the following image:
+
 ![image](loss.jpg)
 
 To make CapsNet more robust, the author trained it with a second task: to reconstruct the image from the activation vector only. The loss for this task is similar to an auto-encoder, which is a mse-loss or l1-loss between original image and reconstructed one.

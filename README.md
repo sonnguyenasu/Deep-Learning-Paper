@@ -4,6 +4,11 @@ This is inspired by the work of multiple people on the internet (including but n
 To be short, it is my resolution for 2021 to keeps reading and summarizing significant paper in Machine Learning, especially Computer Vision. I will also try to reimplement some of the interesting paper.
 
 ****
+## Image Representation
+
+- [Capsule Network](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Image%20Representation/CapsNet.md)
+
+****
 ## Object Detection
 <details>
 <summary style='font-size:15px;'>Two-stage methods</summary>

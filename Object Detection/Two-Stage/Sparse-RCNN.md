@@ -15,7 +15,9 @@ Given an image I, the goal of Sparse RCNN is to guess a sparse set of region pro
 ![image](sparse-rcnn-overall.png)
 
 **1. Iterative Box Refinement**
-   - Borrowing the idea of Cascade RCNN, the model use iterative box refinement process to guess final set of bounding boxes. That is: instead of directly output boxes and class after the second stage, the predicted boxes will be passed as a proposal region again to the next step of yet another RCNN head. 
+
+Borrowing the idea of Cascade RCNN, the model use iterative box refinement process to guess final set of bounding boxes. That is: instead of directly output boxes and class after the second stage, the predicted boxes will be passed as a proposal region again to the next step of yet another RCNN head. 
+
 ![image](cascade_rcnn.png)
 
 **2. Learned proposed regions without anchor**
@@ -30,6 +32,6 @@ The biggest contribution of Sparse R-CNN is the Dynamic Convolution. After we ge
 
 ![dynamicconv](sparse-rcnn-dynamic.jpg)
  
-    * The proposed feature is just set of vectors (number of vectors = number of proposed boxes). Each of the vector will interact with pooled boxes in a manner of a matrix multiplication. The proposed feature vectors are also passed to a self-attention head. (I guess the effect of this is to suppress the regions that are likely to be from similar bounding boxes, but I am not quite sure).
+The proposed feature is just set of vectors (number of vectors = number of proposed boxes). Each of the vector will interact with pooled boxes in a manner of a matrix multiplication. The proposed feature vectors are also passed to a self-attention head. (I guess the effect of this is to suppress the regions that are likely to be from similar bounding boxes, but I am not quite sure).
    
 The output of Dynamic Convolution layer is a set of 1-d features which are then passed to fully-connected layers to get class prediction and bounding boxes prediction like normal RCNN.

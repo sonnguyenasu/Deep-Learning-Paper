@@ -14,6 +14,8 @@ To be short, it is my resolution for 2021 to keeps reading and summarizing signi
 <summary style='font-size:15px;'>Two-stage methods</summary>
 
 - [Faster RCNN](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Two-Stage/Faster%20RCNN.md)
+
+- [Sparse RCNN](https://github.com/tson1997/Deep-Learning-Paper/blob/main/Object%20Detection/Two-Stage/Sparse-RCNN.md)
   
 </details>
 

@@ -6,9 +6,9 @@ Network searching has been people interest long ago even before Deep Learning. W
 
 In short, it worths our attention to dive into the subject of Neural Architecture Search (NAS) due to reasons:
 
-- It makes the performance better due to reduction of redundant parameters that inject noises into our model.
-- It makes our model lighter due to fewer number of parameters in the network.
-- It is no longer time-consuming and resource consuming and can be used in industry.
+- It makes the **performance better** due to reduction of redundant parameters that inject noises into our model.
+- It makes our model **lighter** due to fewer number of parameters in the network.
+- It is becoming more and **more efficient** and can be used in industry.
 
 ****
 ## Some terms that are often coming up in NAS paper

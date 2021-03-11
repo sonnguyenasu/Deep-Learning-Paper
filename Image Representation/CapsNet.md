@@ -19,7 +19,7 @@ A capsule is a group of neurons. Its output, instead of being a single scalar li
 
 The presence of object entity is represented by the activation vector's length (being normalized so that we can have a probability), while the properties are represented by activation vector's orientation.
 
-![image](capsnet.png)
+![image](images/capsnet.png)
 *The image above describe CapsNet architecture: it consists of a Conv2d followed by 2 capsule layers 
 named Primary Caps and Digit Caps.*
 
@@ -59,7 +59,7 @@ So all left is just how can we come up with the set of routing parameters <img s
 
 It is easy to see that what <img src="https://render.githubusercontent.com/render/math?math=c_{ji}"> does actually is similar to the "*agreement*" factor between 2 capsules that was discussed previously. One easy way to do it is that we can calculate the dot product between output vector of capsule j (<img src="https://render.githubusercontent.com/render/math?math=v_j">) and the converted output vector of capsule i in previous layer (which is <img src="https://render.githubusercontent.com/render/math?math=\hat{u}_{j|i}">). Hence, the author comes up with idea of dynamic routing algorithm, which does exactly what describe above:
 
-![algorithm](routing-capsnet.png)
+![algorithm](images/routing-capsnet.png)
 
 ****
 ### Loss function and Task to learn
@@ -74,7 +74,7 @@ For each digit capsule k:
 
 The explanation of each component in the loss is as the following image:
 
-![image](loss.jpg)
+![image](images/loss.jpg)
 
 To make CapsNet more robust, the author trained it with a second task: to reconstruct the image from the activation vector only. The loss for this task is similar to an auto-encoder, which is a mse-loss or l1-loss between original image and reconstructed one.
 

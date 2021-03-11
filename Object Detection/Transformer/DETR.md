@@ -43,7 +43,7 @@ Due to the fact that the predicted set has no temporal dependency, it would be n
 
 **3. DETR Model**
 
-![image_model](detr.png)
+![image_model](images/detr.png)
 
 1. Backbone
    
@@ -57,7 +57,7 @@ Due to the fact that the predicted set has no temporal dependency, it would be n
    
    Since we want to decode all at once, the positional embedding of the input in Decoder Stage would be different from normal Transformer. DETR uses a special position embeddings that can reflect invariant in permutation. These N special vectors are called *"object queries"* and was also passed to Transformer Decoder and a final Feed Forward Layer to get N final predictions of the bounding box and classification score.
 
-    ![Transformer Model](./DETR_transformer.png)
+    ![Transformer Model](images/DETR_transformer.png)
 
 
 
